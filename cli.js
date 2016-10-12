@@ -102,14 +102,26 @@ function onUse(name) {
     var allRegistries = getAllRegistry();
     if (allRegistries.hasOwnProperty(name)) {
         var registry = allRegistries[name];
+        
+        fs.writeFile(NRMRC, 'registry "' + registry.registry + '"', function (err) {
+          if (err) throw err;
+          // console.log('It\'s saved!');
+          
+          printMsg([
+              '', '   YARN Registry has been set to: ' + registry.registry, ''
+          ]);
+        });
+        
+        // 同时更改npm的源
         npm.load(function (err) {
             if (err) return exit(err);
+
             npm.commands.config(['set', 'registry', registry.registry], function (err, data) {
                 if (err) return exit(err);
                 console.log('                        ');
                 var newR = npm.config.get('registry');
                 printMsg([
-                    '', '   Registry has been set to: ' + newR, ''
+                    '', '   NPM Registry has been set to: ' + newR, ''
                 ]);
             })
         });
