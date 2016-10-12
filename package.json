@@ -1,25 +1,25 @@
 {
-  "name": "nrm",
+  "name": "yrm",
   "version": "1.0.0",
   "description": "NPM registry manager can help you easy and fast switch between different npm registries, now include: cnpm, taobao, nj(nodejitsu), rednpm, edunpm",
   "bin": "./cli.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Pana/nrm.git"
+    "url": "git://github.com/i5ting/yrm.git"
   },
   "scripts": {
-    "star": "npm star nrm"
+    "star": "npm star yrm"
   },
   "keywords": [
     "NPM",
     "registry"
   ],
-  "author": "Pana",
+  "author": "i5ting",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pana/nrm/issues"
+    "url": "https://github.com/i5ting/yrm/issues"
   },
-  "homepage": "https://github.com/Pana/nrm",
+  "homepage": "https://github.com/i5ting/yrm",
   "dependencies": {
     "async": "^1.5.2",
     "commander": "^2.9.0",
