@@ -13,7 +13,8 @@ var only = require('only');
 
 var registries = require('./registries.json');
 var PKG = require('./package.json');
-var NRMRC = path.join(process.env.HOME, '.yarnrc');
+var YRMRC = path.join(process.env.HOME, '.yrmrc');
+var YARNRC = path.join(process.env.HOME, '.yarnrc');
 
 
 program
@@ -103,7 +104,7 @@ function onUse(name) {
     if (allRegistries.hasOwnProperty(name)) {
         var registry = allRegistries[name];
         
-        fs.writeFile(NRMRC, 'registry "' + registry.registry + '"', function (err) {
+        fs.writeFile(YARNRC, 'registry "' + registry.registry + '"', function (err) {
           if (err) throw err;
           // console.log('It\'s saved!');
           
@@ -230,11 +231,11 @@ function getCurrentRegistry(cbk) {
 }
 
 function getCustomRegistry() {
-    return fs.existsSync(NRMRC) ? ini.parse(fs.readFileSync(NRMRC, 'utf-8')) : {};
+    return fs.existsSync(YRMRC) ? ini.parse(fs.readFileSync(YRMRC, 'utf-8')) : {};
 }
 
 function setCustomRegistry(config, cbk) {
-    echo(ini.stringify(config), '>', NRMRC, cbk);
+    echo(ini.stringify(config), '>', YRMRC, cbk);
 }
 
 function getAllRegistry() {
@@ -262,4 +263,10 @@ function exit(err) {
 function line(str, len) {
     var line = new Array(Math.max(1, len - str.length)).join('-');
     return ' ' + line + ' ';
+}
+
+module.exports = {
+    getCurrentRegistry : getCurrentRegistry,
+    getCustomRegistry : getCustomRegistry,
+    getAllRegistry: getAllRegistry
 }
