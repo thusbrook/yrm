@@ -1,10 +1,10 @@
 {
   "name": "yrm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NPM registry manager can help you easy and fast switch between different npm registries, now include: cnpm, taobao, nj(nodejitsu), rednpm, edunpm",
-  "bin":{ 
-    "yrman" : "./cli.js"
-    },
+  "bin": {
+    "yrman": "./cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/i5ting/yrm.git"
