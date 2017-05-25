@@ -4,7 +4,7 @@ yrm -- YARN registry manager
 [![NPM version][npm-image]][npm-url]
 
 `yrm` can help you easy and fast switch between different npm registries,
-now include: `npm`, `cnpm`, `taobao`, `nj(nodejitsu)`, `rednpm`.
+now include: `npm`, `cnpm`, `taobao`, `nj(nodejitsu)`, `rednpm`, `yarn`.
 
 ## Install
 
@@ -22,6 +22,7 @@ $ yrm ls
   nj ------  https://registry.nodejitsu.com/
   rednpm -- http://registry.mirror.cqupt.edu.cn
   skimdb -- https://skimdb.npmjs.com/registry
+  yarn ----  https://registry.yarnpkg.com
 
 ```
 
@@ -60,11 +61,11 @@ Usage: yrm [options] [command]
 * [nodejitsu](https://www.nodejitsu.com)
 * [taobao](http://npm.taobao.org/)
 * [rednpm](http://npm.mirror.cqupt.edu.cn)
-
+* [yarn](https://registry.yarnpkg.com)
 
 ## Notice
 
-When you use an other registry, you can not use the `publish` command. 
+When you use an other registry, you can not use the `publish` command.
 
 ## TODO
 

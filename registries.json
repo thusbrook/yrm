@@ -26,5 +26,9 @@
     "edunpm": {
         "home": "http://www.enpmjs.org",
         "registry": "http://registry.enpmjs.org/"
+    },
+    "yarn": {
+        "home": "https://yarnpkg.com",
+        "registry": "https://registry.yarnpkg.com"
     }
 }
